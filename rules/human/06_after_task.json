@@ -1,0 +1,19 @@
+{
+  "id": "human.after_task",
+  "description": "任务收尾：一项任务完成后不立刻按返回/退出，先随机停留几秒，模拟注意力分散。",
+  "priority": 100,
+  "values": {
+    "human.after_task.exit_delay.range": [5.0, 10.0],
+    "human.after_task.exit_delay.probability": 1.0,
+    "human.after_task.ai_fallback": true,
+    "human.after_task.ai_blind_tap": true,
+    "human.after_task.ai_verify_seconds": 1.5
+  },
+  "schema": {
+    "human.after_task.exit_delay.range": {"type": "range", "min": 0, "max": 120},
+    "human.after_task.exit_delay.probability": {"type": "number", "min": 0, "max": 1},
+    "human.after_task.ai_fallback": {"type": "boolean"},
+    "human.after_task.ai_blind_tap": {"type": "boolean"},
+    "human.after_task.ai_verify_seconds": {"type": "number", "min": 0.2, "max": 10}
+  }
+}

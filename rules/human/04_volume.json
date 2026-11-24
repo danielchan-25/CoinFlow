@@ -1,0 +1,17 @@
+{
+  "id": "human.volume",
+  "description": "媒体音量：始终落在低音量区间（默认 5%–10%），按设备最大档位换算成索引。",
+  "priority": 100,
+  "values": {
+    "human.volume.low": 0.05,
+    "human.volume.high": 0.1,
+    "human.volume.min_index": 1,
+    "human.volume.fallback_max_index": 15
+  },
+  "schema": {
+    "human.volume.low": {"type": "number", "min": 0, "max": 1},
+    "human.volume.high": {"type": "number", "min": 0, "max": 1},
+    "human.volume.min_index": {"type": "integer", "min": 0, "max": 15},
+    "human.volume.fallback_max_index": {"type": "integer", "min": 1, "max": 150}
+  }
+}

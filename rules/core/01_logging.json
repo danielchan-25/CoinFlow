@@ -1,0 +1,21 @@
+{
+  "id": "logging",
+  "description": "运行日志：目录、开关、OCR 预览行数、慢命令阈值、截图归档。",
+  "priority": 5,
+  "values": {
+    "logging.enabled": true,
+    "logging.dir": "logs",
+    "logging.ocr_preview": 5,
+    "logging.ocr_lines": true,
+    "logging.save_screens": true,
+    "logging.adb_slow_ms": 1500
+  },
+  "schema": {
+    "logging.enabled": {"type": "boolean"},
+    "logging.dir": {"type": "string"},
+    "logging.ocr_preview": {"type": "integer", "min": 0, "max": 50},
+    "logging.ocr_lines": {"type": "boolean"},
+    "logging.save_screens": {"type": "boolean"},
+    "logging.adb_slow_ms": {"type": "integer", "min": 100, "max": 60000}
+  }
+}

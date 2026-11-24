@@ -1,0 +1,40 @@
+{
+  "id": "app.kuaishou",
+  "description": "快手极速版（com.kuaishou.nebula）：默认设备、时间预算与安全黑名单扩展。",
+  "priority": 200,
+  "values": {
+    "app.kuaishou.package": "com.kuaishou.nebula",
+    "app.kuaishou.default_serial": "",
+    "app.kuaishou.default_minutes": 15.0,
+    "app.kuaishou.volume.low": 0.05,
+    "app.kuaishou.volume.high": 0.1,
+    "app.kuaishou.notes": [
+      "任务中心有悬浮动画，uiautomator 层级会过期，统一用 OCR",
+      "底部导航 y>2060 的点击一律拒绝，避免误触导航栏",
+      "serial 留空：自动使用当前唯一在线设备或 ADB_SERIAL；无线调试时填 192.168.x.x:5555"
+    ]
+  },
+  "schema": {
+    "app.kuaishou.package": {
+      "type": "string"
+    },
+    "app.kuaishou.default_serial": {
+      "type": "string"
+    },
+    "app.kuaishou.default_minutes": {
+      "type": "number",
+      "min": 0.1,
+      "max": 600
+    },
+    "app.kuaishou.volume.low": {
+      "type": "number",
+      "min": 0,
+      "max": 1
+    },
+    "app.kuaishou.volume.high": {
+      "type": "number",
+      "min": 0,
+      "max": 1
+    }
+  }
+}

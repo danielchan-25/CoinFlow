@@ -1,0 +1,107 @@
+{
+  "id": "app.soda_music",
+  "description": "汽水音乐（com.luna.music）福利中心：任务顺序、逻辑坐标、已知坑位。",
+  "priority": 200,
+  "values": {
+    "app.soda_music.package": "com.luna.music",
+    "app.soda_music.serial": "",
+    "app.soda_music.task_order": [
+      "签到",
+      "翻卡",
+      "看广告",
+      "逛街",
+      "连续刷视频",
+      "听歌"
+    ],
+    "app.soda_music.excluded_tasks": [
+      "查额",
+      "绑定",
+      "银行卡",
+      "驾照",
+      "红包雨"
+    ],
+    "app.soda_music.ad.close_x": [
+      0.9,
+      0.04
+    ],
+    "app.soda_music.ad.end_card_claim": [
+      0.5,
+      0.528
+    ],
+    "app.soda_music.ad.end_card_stubborn_exit": [
+      0.5,
+      0.592
+    ],
+    "app.soda_music.ad.end_card_dismiss_x": [
+      0.48,
+      0.66
+    ],
+    "app.soda_music.ad.continue_watch": [
+      0.5,
+      0.528
+    ],
+    "app.soda_music.reward.happy_accept": [
+      0.442,
+      0.527
+    ],
+    "app.soda_music.reward.dismiss_x": [
+      0.47,
+      0.66
+    ],
+    "app.soda_music.shop.enter": [
+      0.79,
+      0.17
+    ],
+    "app.soda_music.shop.progress_text": "每日可完成(\\d+)/15次",
+    "app.soda_music.volume.low": 0.05,
+    "app.soda_music.volume.high": 0.1,
+    "app.soda_music.notes": [
+      "逛街：只进正在开播的直播流；未开播（马上开播）时倒计时不跳，浏览不计次",
+      "逛街：浏览满 30 秒后按返回会弹「再看N秒可获得奖励」，点「继续观看」才是计时入口，点「坚持退出」不计次",
+      "广告结束页：根据当前可见控件边界点击，无法确认边界时不发坐标点击",
+      "查额类任务永久排除（一键领额度/查额成功领大奖）",
+      "serial 留空：自动使用当前唯一在线设备或 ADB_SERIAL；无线调试时填 192.168.x.x:5555"
+    ]
+  },
+  "schema": {
+    "app.soda_music.package": {
+      "type": "string"
+    },
+    "app.soda_music.task_order": {
+      "type": "list"
+    },
+    "app.soda_music.excluded_tasks": {
+      "type": "list"
+    },
+    "app.soda_music.ad.close_x": {
+      "type": "point",
+      "min": 0,
+      "max": 1
+    },
+    "app.soda_music.ad.end_card_claim": {
+      "type": "range",
+      "min": 0,
+      "max": 1
+    },
+    "app.soda_music.ad.end_card_stubborn_exit": {
+      "type": "range",
+      "min": 0,
+      "max": 1
+    },
+    "app.soda_music.reward.happy_accept": {
+      "type": "range",
+      "min": 0,
+      "max": 1
+    },
+    "app.soda_music.volume.low": {
+      "type": "number",
+      "min": 0,
+      "max": 1
+    },
+    "app.soda_music.volume.high": {
+      "type": "number",
+      "min": 0,
+      "max": 1
+    }
+  }
+}

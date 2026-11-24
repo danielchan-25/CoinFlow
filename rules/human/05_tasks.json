@@ -1,0 +1,21 @@
+{
+  "id": "human.tasks",
+  "description": "任务节奏：逛街单商品停留、广告收尾延迟、抢红包连点频率。",
+  "priority": 100,
+  "values": {
+    "human.tasks.shop.dwell_base": 30.0,
+    "human.tasks.shop.dwell_extra_mean": 6.0,
+    "human.tasks.shop.clip": [30.2, 65.0],
+    "human.tasks.ad.tail": [1.0, 4.0],
+    "human.tasks.ad.close_delay": [0.5, 2.0],
+    "human.tasks.rapid.taps_per_second": [1.2, 3.5]
+  },
+  "schema": {
+    "human.tasks.shop.dwell_base": {"type": "number", "min": 1, "max": 300},
+    "human.tasks.shop.dwell_extra_mean": {"type": "number", "min": 0.5, "max": 60},
+    "human.tasks.shop.clip": {"type": "range", "min": 1, "max": 300},
+    "human.tasks.ad.tail": {"type": "range", "min": 0, "max": 30},
+    "human.tasks.ad.close_delay": {"type": "range", "min": 0, "max": 15},
+    "human.tasks.rapid.taps_per_second": {"type": "range", "min": 0.3, "max": 10}
+  }
+}

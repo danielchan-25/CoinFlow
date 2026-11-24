@@ -1,0 +1,46 @@
+{
+  "id": "app.douyin",
+  "description": "抖音极速版（com.ss.android.ugc.aweme.lite）：默认任务与拟人偏好。",
+  "priority": 200,
+  "values": {
+    "app.douyin.package": "com.ss.android.ugc.aweme.lite",
+    "app.douyin.default_tasks": [
+      "ad",
+      "video"
+    ],
+    "app.douyin.default_daily_tasks": [
+      "sign_in",
+      "wallet",
+      "week",
+      "reservation",
+      "hammer"
+    ],
+    "app.douyin.volume.low": 0.05,
+    "app.douyin.volume.high": 0.1,
+    "app.douyin.notes": [
+      "未登录时会抛 RunError，需要先手动登录",
+      "看视频任务：每批随机回看一条，低频开评论区/点赞"
+    ]
+  },
+  "schema": {
+    "app.douyin.package": {
+      "type": "string"
+    },
+    "app.douyin.default_tasks": {
+      "type": "list"
+    },
+    "app.douyin.default_daily_tasks": {
+      "type": "list"
+    },
+    "app.douyin.volume.low": {
+      "type": "number",
+      "min": 0,
+      "max": 1
+    },
+    "app.douyin.volume.high": {
+      "type": "number",
+      "min": 0,
+      "max": 1
+    }
+  }
+}
